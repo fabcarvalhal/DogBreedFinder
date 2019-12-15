@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_menu_graph"
+    app:startDestination="@id/breedListFragment">
+
+    <fragment
+        android:id="@+id/breedListFragment"
+        android:name="fabriciocarvalhal.com.br.dogbreedfinder.scenes.breedlist.view.BreedListFragment"
+        android:label="fragment_breed_list"
+        tools:layout="@layout/fragment_breed_list" />
+    <fragment
+        android:id="@+id/whatDogFragment"
+        android:name="fabriciocarvalhal.com.br.dogbreedfinder.scenes.whatdog.view.WhatDogFragment"
+        android:label="fragment_what_dog"
+        tools:layout="@layout/fragment_what_dog" />
+    <fragment
+        android:id="@+id/favoritesFragment"
+        android:name="fabriciocarvalhal.com.br.dogbreedfinder.scenes.favorites.view.FavoritesFragment"
+        android:label="fragment_favorites"
+        tools:layout="@layout/fragment_favorites" />
+</navigation>

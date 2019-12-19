@@ -10,6 +10,7 @@
     <string name="label_weight_detail">Weight: %s</string>
     <string name="label_height_detail">Height: %s</string>
     <string name="label_lifeSpan_detail">Life Span: %s</string>
+    <string name="label_whatdog_result">Probably this dog is: %s with a %s of chance</string>
 
 
 </resources>

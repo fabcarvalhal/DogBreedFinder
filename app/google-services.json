@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "54248691795",
+    "firebase_url": "https://dogbreedfinder.firebaseio.com",
+    "project_id": "dogbreedfinder",
+    "storage_bucket": "dogbreedfinder.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:54248691795:android:2524dc19fc01f5aae1cea6",
+        "android_client_info": {
+          "package_name": "fabriciocarvalhal.com.br.dogbreedfinder"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "54248691795-8s7ck8bqkt5mvls4as5hc42sf1de7p5r.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAhvCPggyDOD0wXaZMl9OvKLO_dso6RYBY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "54248691795-8s7ck8bqkt5mvls4as5hc42sf1de7p5r.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

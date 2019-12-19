@@ -5,6 +5,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
+import com.bumptech.glide.load.engine.DiskCacheStrategy
 import com.bumptech.glide.request.RequestOptions
 import fabriciocarvalhal.com.br.dogbreedfinder.R
 import fabriciocarvalhal.com.br.dogbreedfinder.scenes.breedlist.model.BreedModel
@@ -23,12 +24,19 @@ class BreedListAdapter(
 
     override fun onBindViewHolder(holder: BreedListViewHolder, position: Int) {
         with(holder.itemView) {
+
+
             list[position].let {
+                setOnClickListener { _ ->
+                    onClick(it.id)
+                }
+
                 lifeSpanTxtView?.text = it.life_span
                 nameTxtView?.text = it.name
                 if (!it.url.isNullOrBlank()) {
                     Glide.with(this)
                         .load(it.url)
+                        .diskCacheStrategy(DiskCacheStrategy.NONE)
                         .apply(RequestOptions.circleCropTransform())
                         .into(imageView)
                 } else {

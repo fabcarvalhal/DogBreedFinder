@@ -11,6 +11,7 @@
         android:layout_height="match_parent"
         tools:listitem="@layout/item_breed"
         tools:itemCount="15"
+        android:transitionName="expand"
         />
 
 </FrameLayout>

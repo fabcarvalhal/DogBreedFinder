@@ -10,5 +10,5 @@ interface DogsRepository {
     fun handleGetBreeds(@Path("limit") limit: Int, @Path("offset") offset: Int) : Call<List<BreedModel>>
 
     @GET("breed/{id}")
-    fun handleGetTimezone(@Path("id") id: Int) : Call<BreedModel>
+    fun handleGetBreed(@Path("id") id: Int) : Call<BreedModel>
 }

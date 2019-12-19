@@ -19,11 +19,11 @@ class BreedListPresenter(private val view: BreedList.View) : BreedList.Presenter
         }
         isLoading = true
         val apiCall = DogsService().getService().handleGetBreeds(DEFAULT_LIMIT, offset)
-        offset = offset + DEFAULT_LIMIT
+        offset =+ DEFAULT_LIMIT
         apiCall.enqueue(object: Callback<List<BreedModel>> {
             override fun onFailure(call: Call<List<BreedModel>>, t: Throwable) {
 //                view.displayFailure(R.string.error_get_timezones)
-                Log.d("PORRA", t.localizedMessage)
+                Log.d("ERRO", t.localizedMessage)
                 isLoading = false
             }
 
@@ -31,7 +31,6 @@ class BreedListPresenter(private val view: BreedList.View) : BreedList.Presenter
                 isLoading = false
                 response.body()?.let {
                     view.displayBreeds(it)
-                    Log.d("DOGS", it.toString())
                 } ?: run {
 //                    view.displayFailure(R.string.error_get_timezones)
                 }

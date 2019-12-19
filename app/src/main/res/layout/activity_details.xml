@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".scenes.details.view.DetailsActivity">
+
+        <ImageView
+            android:id="@+id/bigImageView"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            tools:src="@drawable/ic_look"
+            tools:text="Teste"
+            android:scaleType="centerCrop"
+            />
+
+        <TextView
+            android:id="@+id/dogNameTxtView"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            tools:text="Teste"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="24dp"
+            android:layout_marginStart="24dp"/>
+
+        <TextView
+            android:id="@+id/temperamentTxtView"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            tools:text="Teste"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="24dp"
+            android:layout_marginStart="24dp"/>
+
+        <TextView
+            android:id="@+id/originTxtView"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            tools:text="Teste"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="24dp"
+            android:layout_marginStart="24dp"/>
+
+        <TextView
+            android:id="@+id/lifeSpanDetailTxtView"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            tools:text="Teste"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="24dp"
+            android:layout_marginStart="24dp"/>
+
+        <TextView
+            android:id="@+id/weightTxtView"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            tools:text="Teste"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="24dp"
+            android:layout_marginStart="24dp"/>
+
+        <TextView
+            android:id="@+id/heightTxtView"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            tools:text="Teste"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="24dp"
+            android:layout_marginStart="24dp"/>
+
+        <TextView
+            android:id="@+id/bredForTxtView"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            tools:text="Teste"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="24dp"
+            android:layout_marginStart="24dp"
+            />
+
+        <TextView
+            android:id="@+id/breedGroupTxtView"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            tools:text="Teste"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="24dp"
+            android:layout_marginStart="24dp"/>
+
+
+    </LinearLayout>
+</ScrollView>

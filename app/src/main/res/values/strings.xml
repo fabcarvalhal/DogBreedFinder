@@ -1,6 +1,15 @@
 <resources>
     <string name="app_name">DogBreedFinder</string>
 
-    <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="label_name_detail">Name: %s</string>
+    <string name="label_origin_detail">Origin: %s</string>
+    <string name="label_bredfor_detail">Bred for: %s</string>
+    <string name="label_breedgroup_detail">Breed Group: %s</string>
+    <string name="label_temperament_detail">Temperament: %s</string>
+    <string name="label_weight_detail">Weight: %s</string>
+    <string name="label_height_detail">Height: %s</string>
+    <string name="label_lifeSpan_detail">Life Span: %s</string>
+
+
 </resources>

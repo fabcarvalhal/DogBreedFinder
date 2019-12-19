@@ -30,7 +30,7 @@ import kotlin.math.min
 
 class WhatDogPresenter(private val view: WhatDog.View, private val interpreterModelPath: String, private val labelsFilePath: InputStream): WhatDog.Presenter {
     override fun runModelInference(forImage: Bitmap) {
-        selectedImage = forImage.copy(Bitmap.Config.ALPHA_8, true)
+        selectedImage = forImage.copy(Bitmap.Config.RGBA_F16, true)
 
         runModelInference()
     }

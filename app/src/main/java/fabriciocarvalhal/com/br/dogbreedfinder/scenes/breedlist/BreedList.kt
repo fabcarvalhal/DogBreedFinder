@@ -8,6 +8,6 @@ interface BreedList {
     }
 
     interface Presenter {
-        fun getBreeds(limit: Int, offset: Int)
+        fun getBreeds()
     }
 }

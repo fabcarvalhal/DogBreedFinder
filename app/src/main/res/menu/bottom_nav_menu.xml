@@ -4,11 +4,13 @@
     <item
         android:title="Breeds"
         android:id="@+id/breedListFragment"
+        android:icon="@drawable/ic_dog"
         />
 
     <item
         android:id="@+id/whatDogFragment"
         android:title="WhatDog"
+        android:icon="@drawable/ic_look"
         />
 
     <item

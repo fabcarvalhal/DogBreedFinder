@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 import fabriciocarvalhal.com.br.dogbreedfinder.R
 import fabriciocarvalhal.com.br.dogbreedfinder.scenes.breedlist.BreedList
 import fabriciocarvalhal.com.br.dogbreedfinder.scenes.breedlist.BreedListAdapter
@@ -40,10 +41,23 @@ class BreedListFragment : Fragment(), BreedList.View {
             print(it)
         }
 
+
+
         recyclerView?.layoutManager = LinearLayoutManager(context, LinearLayoutManager.VERTICAL, false)
         recyclerView?.adapter = adapter
 
-        presenter.getBreeds(5,0)
+        recyclerView?.addOnScrollListener(object : RecyclerView.OnScrollListener() {
+            override fun onScrolled(recyclerView: RecyclerView, dx: Int, dy: Int) {
+                super.onScrolled(recyclerView, dx, dy)
+                val layoutManager = recyclerView.layoutManager as LinearLayoutManager
+                if (adapter.itemCount  <= layoutManager.findLastCompletelyVisibleItemPosition() + 2) {
+                    presenter.getBreeds()
+                }
+
+            }
+        })
+
+        presenter.getBreeds()
     }
 
     override fun displayBreeds(breeds: List<BreedModel>) {

@@ -4,7 +4,8 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.squareup.picasso.Picasso
+import com.bumptech.glide.Glide
+import com.bumptech.glide.request.RequestOptions
 import fabriciocarvalhal.com.br.dogbreedfinder.R
 import fabriciocarvalhal.com.br.dogbreedfinder.scenes.breedlist.model.BreedModel
 import kotlinx.android.synthetic.main.item_breed.view.*
@@ -22,13 +23,19 @@ class BreedListAdapter(
 
     override fun onBindViewHolder(holder: BreedListViewHolder, position: Int) {
         with(holder.itemView) {
-            lifeSpanTxtView?.text = list[position].life_span
-            nameTxtView?.text = list[position].name
-            Picasso.get()
-                .load(list[position].url)
-                .centerCrop()
-                .resize(imageView?.width ?: 40, imageView?.height ?: 40)
-                .into(imageView)
+            list[position].let {
+                lifeSpanTxtView?.text = it.life_span
+                nameTxtView?.text = it.name
+                if (!it.url.isNullOrBlank()) {
+                    Glide.with(this)
+                        .load(it.url)
+                        .apply(RequestOptions.circleCropTransform())
+                        .into(imageView)
+                } else {
+                    imageView?.visibility = View.GONE
+                }
+            }
+
         }
     }
 

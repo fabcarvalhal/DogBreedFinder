@@ -6,12 +6,24 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.recyclerview.widget.LinearLayoutManager
 import fabriciocarvalhal.com.br.dogbreedfinder.R
+import fabriciocarvalhal.com.br.dogbreedfinder.scenes.breedlist.BreedList
+import fabriciocarvalhal.com.br.dogbreedfinder.scenes.breedlist.BreedListAdapter
+import fabriciocarvalhal.com.br.dogbreedfinder.scenes.breedlist.model.BreedModel
+import fabriciocarvalhal.com.br.dogbreedfinder.scenes.breedlist.presenter.BreedListPresenter
+import kotlinx.android.synthetic.main.fragment_breed_list.*
 
 /**
  * A simple [Fragment] subclass.
  */
-class BreedListFragment : Fragment() {
+class BreedListFragment : Fragment(), BreedList.View {
+
+    private lateinit var adapter: BreedListAdapter
+
+    private val presenter: BreedListPresenter by lazy {
+        BreedListPresenter(this)
+    }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -21,5 +33,21 @@ class BreedListFragment : Fragment() {
         return inflater.inflate(R.layout.fragment_breed_list, container, false)
     }
 
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        adapter = BreedListAdapter(arrayListOf()) {
+            // TODO: Ir pro detalhe
+            print(it)
+        }
+
+        recyclerView?.layoutManager = LinearLayoutManager(context, LinearLayoutManager.VERTICAL, false)
+        recyclerView?.adapter = adapter
+
+        presenter.getBreeds(5,0)
+    }
+
+    override fun displayBreeds(breeds: List<BreedModel>) {
+        adapter.appendItems(breeds)
+    }
 
 }
